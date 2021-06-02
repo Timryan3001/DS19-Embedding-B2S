@@ -15,6 +15,11 @@ const vizOptions = {
   height: 800,
   width: 1000,
   hideToolbar: true,
+  Category: ["Technology", "Furniture"],
+  onFirstInteractive: function () {
+    console.log("this viz is interactive, disabling button");
+    document.getElementById("exportPdf").disabled = false;
+  },
 };
 
 function initViz() {
